@@ -7,8 +7,12 @@
 
 }
 @font-face {
-    font-family: "arabic";
-    src: url("../fonts/URWGeometricArabic-Heavy\ _.ttf");
+    font-family: arabic-heavy;
+    src: url("../fonts/URW-Heavy.ttf");
+}
+@font-face {
+    font-family: arabic-regular;
+    src: url("../fonts/URW-Regular.ttf");
 }
 
 body{
@@ -17,7 +21,7 @@ body{
 }
 *{
     box-sizing: border-box;
-    font-family: 'arabic';
+    font-family: 'arabic-heavy';
     text-align: right;
 }
 
@@ -562,6 +566,9 @@ p, li > span{
     }
     .hero-title{
         font-size: 7.5vw;
+    }
+    *{
+        font-family: "arabic-regular";
     }
 
     /* Hero */
