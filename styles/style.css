@@ -595,7 +595,7 @@ p, li > span{
 
         overflow: hidden;
 
-        padding: 0;
+        padding: 10vh 0;
     }
     .logo{
         width: 10rem;
@@ -624,6 +624,13 @@ p, li > span{
             width: 0;
         }100%{
             width: 100%;
+        }
+    }
+    @keyframes closeMenu {
+        0%{
+            width: 100%;
+        }100%{
+            width: 0;
         }
     }
 
