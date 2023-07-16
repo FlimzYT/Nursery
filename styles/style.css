@@ -131,6 +131,7 @@ p, li > span{
         background: none;
 
         width: 35px;
+        display: none;
     }
     .menu-btn > img{
         width: 100%;
@@ -575,9 +576,53 @@ p, li > span{
     }
     
     /* NAVBAR */
+    .pages{
+        width: 0;
+        height: 100vh;
+
+        position: fixed;
+        top: 0;
+        right: 0;
+
+        background: #b1bac9dc;
+        backdrop-filter: blur( 5px);
+
+        border-radius: 0;
+        display: none;
+
+        flex-direction: column;
+        justify-content: space-around;
+
+        overflow: hidden;
+
+        padding: 0;
+    }
     .logo{
         width: 10rem;
         top: 0.7rem;
+    }
+    .menu-btn{
+        position: fixed;
+        display: block;
+    }
+
+    .pages.open{
+        display: flex;
+        animation: openMenu 0.3s ease;
+        width: 100%;
+    }
+    .page-link{
+        font-family: 'arabic-heavy';
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    @keyframes openMenu {
+        0%{
+            width: 0;
+        }100%{
+            width: 100%;
+        }
     }
 
     /* Hero */

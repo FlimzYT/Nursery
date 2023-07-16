@@ -110,9 +110,7 @@ fetch('./content/homeContent.json')
           dot.classList.remove('hidden')
         });
         
-        // Responsiveness
-        document.querySelector('.pages').classList.add('hidden')
-        document.querySelector('.menu-btn').classList.remove('hidden')
+
       }else{
         moveIntensity = 33.33;
         numberOfSlides = 4;
@@ -121,9 +119,6 @@ fetch('./content/homeContent.json')
           dot.classList.add('hidden')
         });
 
-        // Responsiveness
-        document.querySelector('.pages').classList.remove('hidden')
-        document.querySelector('.menu-btn').classList.add('hidden')
       }
     }
 
