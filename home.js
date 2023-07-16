@@ -62,7 +62,7 @@ function createLayout(layout, title, text, image, version, title2, text2, image2
           </ul>
         </div>
         <div class="image">
-          <img src="images/photos/image2.png">
+          <img src="images/photos/${image}">
         </div>
       </section>
     `
