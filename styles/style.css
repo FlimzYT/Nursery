@@ -603,7 +603,9 @@ p, li > span{
     }
     .menu-btn{
         position: fixed;
+
         display: block;
+
     }
 
     .pages.open{
