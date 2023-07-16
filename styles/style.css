@@ -118,11 +118,8 @@ p, li > span{
 
         width: 11.5rem;
         aspect-ratio: 1/1;
-        transition: 0.2s ease;
     }
-    .logo:hover{
-        transform: scale(1.1);
-    }
+
 
     .active-page{
         color: var(--blue);
@@ -547,7 +544,7 @@ p, li > span{
 @media only screen and (max-width: 1000px){
 
     :root{
-        --section-padding: 3rem 5%;
+        --section-padding: 3rem 15%;
     }
     .wave{
         height: 4vh;
@@ -555,16 +552,20 @@ p, li > span{
     .text{
         min-height: 0;
     }
+    .image{
+        min-height: 0;
+        height: 100%;
+    }
 
     /* TEXT */
-    .gallery > h1{
-        font-size: 1.8rem;
+    .gallery > h1, .layout5 > h1{
+        font-size: 2.6rem;
     }
     h2{
-        font-size: 1.4rem;
+        font-size: 2rem;
     }
     p, li > span{
-        font-size: 1rem;
+        font-size: 1.4rem;
     }
     .hero-title{
         font-size: 7.5vw;
@@ -609,7 +610,7 @@ p, li > span{
     /* Layout 1 */
 
     .diamond{
-        width: 70%;
+        width: 45%;
     }
     
     /* Layout 2 */
@@ -638,7 +639,6 @@ p, li > span{
 
     .layout2 > .image{
         min-height: 0;
-        height: unset;
     }
 
     /* layout3 */
@@ -652,5 +652,54 @@ p, li > span{
     }
     .layout3 .text, .layout6 .text, .layout4 .text{
         grid-column: 1;
+    }
+
+    /* How old is ur child */
+    .layout5{
+        padding-top: 30px;
+    }
+    .cards{
+        gap: 5px;
+    }
+    .card > img{
+        width: 100%;
+    }
+    .card{
+        padding: 10px;
+        border-radius: 10px;
+    }
+}
+@media only screen and (max-width: 600px){
+
+    :root{
+        --section-padding: 3rem 5%;
+    }
+    .text{
+        min-height: 0;
+    }
+    .image{
+        min-height: 0;
+        height: 100%;
+    }
+
+    /* TEXT */
+    .gallery > h1, .layout5 > h1{
+        font-size: 1.8rem;
+    }
+    h2{
+        font-size: 1.4rem;
+    }
+    p, li > span{
+        font-size: 1rem;
+    }
+    .hero-title{
+        font-size: 7.5vw;
+    }
+    *{
+        font-family: "arabic-regular";
+    }
+
+    .diamond{
+        width: 70%;
     }
 }
