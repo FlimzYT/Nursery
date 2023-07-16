@@ -100,6 +100,7 @@ fetch('./content/homeContent.json')
     let autoScrollInterval;
     let moveIntensity = 33.33;
     let numberOfSlides = 4;
+    
 
     function adjustToScreenSize(){
       if(window.innerWidth <= 1000){

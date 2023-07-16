@@ -133,7 +133,7 @@ p, li > span{
         border: none;
         background: none;
 
-        width: 50px;
+        width: 35px;
     }
     .menu-btn > img{
         width: 100%;
@@ -363,7 +363,6 @@ p, li > span{
 
 .layout2{
     background: white;
-    display: flex;
     justify-content: space-between;
 
     gap: 5%;
@@ -553,10 +552,13 @@ p, li > span{
     .wave{
         height: 4vh;
     }
+    .text{
+        min-height: 0;
+    }
 
     /* TEXT */
     .gallery > h1{
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     h2{
         font-size: 1.4rem;
@@ -569,6 +571,12 @@ p, li > span{
     }
     *{
         font-family: "arabic-regular";
+    }
+    
+    /* NAVBAR */
+    .logo{
+        width: 10rem;
+        top: 0.7rem;
     }
 
     /* Hero */
@@ -585,7 +593,7 @@ p, li > span{
     
     /* GALLERY */
     .gallery{
-        padding: 25px 0;
+        padding: 40px 0;
     }
     .slide {
         flex: 0 0 100%; /* Adjust to control the number of images shown at once */
@@ -602,5 +610,47 @@ p, li > span{
 
     .diamond{
         width: 70%;
+    }
+    
+    /* Layout 2 */
+    .layout2{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+
+        gap: 2vh;
+    }
+    .layout2 > *:nth-child(1){
+        grid-row: 1;    
+        grid-column: 1;
+    }
+    .layout2 > *:nth-child(2){
+        grid-row: 2;
+        grid-column: 1;
+    }
+    .layout2 > *:nth-child(3){
+        grid-row: 3;
+        grid-column: 1;
+    }
+    .layout2 > *:nth-child(4){
+        grid-row: 4;
+        grid-column: 1;
+    }
+
+    .layout2 > .image{
+        min-height: 0;
+        height: unset;
+    }
+
+    /* layout3 */
+    .layout3, .layout6, .layout4{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .layout3 > *:nth-child(2), .layout6 > *:nth-child(2), .layout4 > *:nth-child(2){
+        grid-row: 2;
+        grid-column: 1;
+    }
+    .layout3 .text, .layout6 .text, .layout4 .text{
+        grid-column: 1;
     }
 }
