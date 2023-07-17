@@ -4,7 +4,7 @@
     --light-blue: #F2F9FD;
 
     --section-padding: 3rem 15%;
-    --section-padding-high: 4rem 13.5rem;
+    --section-padding-low: 4rem 11%;
 }
 @font-face {
     font-family: arabic-heavy;
@@ -23,7 +23,7 @@ body{
 *{
     box-sizing: border-box;
     font-family: 'arabic-heavy';
-    text-align: right;
+    text-align: justify;
 }
 
 
@@ -73,6 +73,10 @@ p, li > span{
     line-height: 193%;
     color: #535353;
     font-size: 1.375rem;
+}
+
+p, li > span, h1, h2{
+    direction: rtl;
 }
 
 /* Navigation bar */
@@ -532,11 +536,11 @@ p, li > span{
 }
 
 .layout7{
-    padding: var(--section-padding-high);
+    padding: var(--section-padding-low);
 }
 
 .layout8{
-    padding: var(--section-padding-high);
+    padding: var(--section-padding-low);
     padding-top: 0;
     padding-bottom: 0;
     height: fit-content;
@@ -603,7 +607,7 @@ p, li > span{
     }
 
     /* TEXT */
-    .gallery > h1, .layout5 > h1{
+    .gallery > h1, .layout5 > h1, .about-title, .about-title2{
         font-size: 2.6rem;
     }
     h2{
@@ -766,11 +770,22 @@ p, li > span{
         padding: 10px;
         border-radius: 10px;
     }
+
+
+
+    /* ABOUT PAGE */
+    
+    .map{
+        width: 92%;
+        aspect-ratio: 4/3;
+    }
+
 }
 @media only screen and (max-width: 600px){
 
     :root{
         --section-padding: 3rem 5%;
+        --section-padding-low: 1rem 5%;
     }
     .text{
         min-height: 0;
@@ -781,7 +796,7 @@ p, li > span{
     }
 
     /* TEXT */
-    .gallery > h1, .layout5 > h1{
+    .gallery > h1, .layout5 > h1, .about-title, .about-title2{
         font-size: 1.8rem;
     }
     h2{
@@ -799,6 +814,17 @@ p, li > span{
 
     .diamond{
         width: 70%;
+    }
+
+    /* ABOUT PAGE */
+    .about-title{
+        padding-top: 150px;
+    }
+    .about-title2{
+        padding-top: 10px;
+    }
+    .subtitle{
+        margin-bottom: 100px;
     }
 }
 
