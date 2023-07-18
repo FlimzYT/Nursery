@@ -75,7 +75,7 @@ p, li > span{
     font-size: 1.375rem;
 }
 
-p, li > span, h1, h2{
+p, li > span, h1, h2, span{
     direction: rtl;
 }
 
@@ -564,6 +564,133 @@ p, li > span, h1, h2{
 }
 .subtitle{
     text-align: center;
+}
+
+/* EVENTS EVENTS EVENTS EVENTS EVENTS EVENTS EVENTS EVENTS EVENTS EVENTS EVENTS EVENTS EVENTS EVENTS EVENTS */
+
+.event-section{
+    background: var(--light-blue);
+    padding: var(--section-padding);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.events{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 47px;
+}
+.event{
+    background: white;
+    border-radius: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.44rem;
+
+    direction: rtl;
+
+    width: 100%;
+
+    transition: 0.2s ease;
+}
+.event-info{
+    padding: 15px 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.44rem;
+
+    cursor: pointer;
+}
+
+.event:has(.event-info:hover){
+    background: #f3f3f3;
+}
+.event:has(.event-info:active){
+    transition: 0.1s ease;
+    background: #dadada;
+}
+.event-info > h2{
+    margin: 0;
+}
+.date{
+    height: fit-content;
+    display: flex;
+    gap: 0.5rem;
+
+    font-size: 1.375rem;
+}
+
+.event-section > .image{
+    min-height: 0;
+    min-width: 0;
+    height: 100%;
+    flex: 1;
+    max-width: 26vw;
+    object-fit: cover;
+}
+
+.event-popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(8px);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+}
+.event-popup > div{
+    position: relative;
+    background: white;
+    border-radius: 15px;
+    width: 50%;
+    min-height: 60%;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    gap: 3%;
+}
+.event-popup-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+.event-popup-text > div > h2{
+    margin: 0;
+}
+.event-popup > div > .image{
+    min-width: 0;
+    min-height: 0;
+    flex: 0.7;
+}
+.close-btn{
+    width: 50px;
+    aspect-ratio: 1/1;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    position: absolute;
+    top: -50px;
+    right: -50px;
+}
+.close-btn > img{
+    width: 100%;
+    height: 100%;
 }
 
 
