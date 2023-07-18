@@ -27,6 +27,7 @@ body{
 }
 
 
+
 .wave{
     position: absolute;
     bottom: -1px;
@@ -576,6 +577,8 @@ p, li > span, h1, h2, span{
     justify-content: center;
     align-items: center;
     gap: 50px;
+
+    min-height: 80vh;
 }
 .events{
     display: flex;
@@ -631,8 +634,8 @@ p, li > span, h1, h2, span{
 .event-section > .image{
     min-height: 0;
     min-width: 0;
-    height: 100%;
     flex: 1;
+    height: 100%;
     max-width: 26vw;
     object-fit: cover;
 }
@@ -650,12 +653,13 @@ p, li > span, h1, h2, span{
     justify-content: center;
     align-items: center;
     z-index: 11;
+
 }
 .event-popup > div{
     position: relative;
     background: white;
     border-radius: 15px;
-    width: 50%;
+    width: 960px;
     min-height: 60%;
 
     display: flex;
@@ -666,7 +670,6 @@ p, li > span, h1, h2, span{
 .event-popup-text{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     flex: 1;
 }
 .event-popup-text > div > h2{
@@ -707,6 +710,16 @@ p, li > span, h1, h2, span{
         font-size: 1.2rem;
     }
 
+
+    /* EVENTS */
+
+    .event-section{
+        padding: 3rem 10%;
+    }
+    .event-section > .image{
+        max-width: unset;
+    }
+
 }
 @media only screen and (max-width: 1228px){
 
@@ -716,8 +729,22 @@ p, li > span, h1, h2, span{
     p, li > span{
         font-size: 1rem;
     }
+
+    /* events page */
+
+    .event-section{
+        padding: 3rem 5%;
+    }
+
+    .event-popup > div{
+        width: 60%;
+    }
 }
 @media only screen and (max-width: 1000px){
+
+    *{
+        -webkit-tap-highlight-color: transparent;
+    }
 
     :root{
         --section-padding: 3rem 15%;
@@ -907,6 +934,35 @@ p, li > span, h1, h2, span{
         aspect-ratio: 4/3;
     }
 
+    /* EVENTS PAGE */
+
+    .event-section{
+        padding: var(--section-padding);
+        flex-direction: column-reverse;
+    }
+    .event-section > .image{
+        width: 100%;
+        flex: none;
+    }
+    .events{
+        width: 100%;
+    }
+    .event-info{
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+
+        width: 100%;
+    }
+
+    .event-popup > div{
+        flex-direction: column;
+        height: 80vh;
+    }
+    .event-popup > div > .image{
+        flex: 1;
+    }
+
 }
 @media only screen and (max-width: 600px){
 
@@ -952,6 +1008,21 @@ p, li > span, h1, h2, span{
     }
     .subtitle{
         margin-bottom: 100px;
+    }
+
+    /* EVENT PAGE */
+
+    .event-popup > div{
+        flex-direction: column;
+        height: 80vh;
+        width: 95vw;
+    }
+    .event-popup-text > div > *{
+        text-align: center;
+        justify-content: center;
+    }
+    .close-btn{
+        right: 0;
     }
 }
 
