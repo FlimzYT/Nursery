@@ -7,9 +7,8 @@
     <link rel="stylesheet" href="styles/style.css">
 
 </head>
-<body class="about">
+<body>
   
-
     <nav>
         <img src="images/logo.png" alt="logo" class="logo">
 
@@ -25,6 +24,26 @@
         </button>
     </nav>
 
+    <h1 class="about-title">تواصل معنا</h1>
+
+    <form id="contactForm" action="contact.php" method="post">
+        <label for="fName">الإسم الأول</label>
+        <input type="text" id="fName" name="fName" required>
+
+        <label for="lName">الإسم الأخير</label>
+        <input type="text" id="lName" name="lName" required>
+        
+        <label for="phone">رقم الهاتف</label>
+        <input type="number" id="phone" name="phone" required>
+        
+        <label for="email">البريد الإلكتروني</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">نص الرسالة</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        
+        <input type="submit" value="ارسل" class="submit-btn">
+    </form>
 
     <script src="Js/Menu.js"></script>
 </body>
