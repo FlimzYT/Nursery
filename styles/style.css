@@ -547,12 +547,15 @@ p, li > span, h1, h2, span{
 
     padding: 1.3%;
     cursor: pointer;
+    text-decoration: none;
 }
 .card > h2{
     margin: 0;
+    text-decoration: none;
 }
-.card img{
+.card > img{
     width: 100%;
+    background: red;
 }
 
 .v2{
