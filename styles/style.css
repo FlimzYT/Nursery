@@ -108,7 +108,7 @@ p, li > span, h1, h2, span{
         margin: 0;
         padding: 5px 41px;
 
-        background: rgba(49, 130, 255, 0.14);
+        background: #e2edff;
         border-radius: 100px;
         list-style: none;
     }
@@ -116,6 +116,7 @@ p, li > span, h1, h2, span{
         font-size: 1.2rem;
         text-decoration: none;
         color: black;
+        cursor: pointer;
     }
 
     .logo{
@@ -142,6 +143,70 @@ p, li > span, h1, h2, span{
     }
     .menu-btn > img{
         width: 100%;
+    }
+    .pages > *{
+        position: relative;
+    }
+
+    .dropdown{
+        list-style: none;
+        padding: 0;
+        direction: rtl;
+
+        position: absolute;
+        right: -10%;
+        top: 100%;
+
+        
+        background: #e2edff;
+        width: 150%;
+
+        display: flex;
+        flex-direction: column;
+        border-radius: 0 0 10px 10px;
+        overflow: hidden;
+
+        animation: dropdown 0.6s ease;
+    }
+    @keyframes dropdown {
+        0%{
+            height: 0;
+        }
+        100%{
+            height: 130px;
+        }
+    }
+    .dropdown > li{
+        padding: 5px 10px;
+        transition: 0.2s all ease;
+    }
+    .dropdown > li:hover{
+        background: #cbd5e4;
+    }
+    .dropdown > li:active{
+        transition: 0.1s all ease;
+        background: #b8c0ce;
+    }
+    .pages > li{
+        display: flex;
+        justify-content: center;
+    }
+    .pages > li > a{
+        position: relative;
+    }
+    .pages > li > a > span{
+        position: absolute;
+        left: -30%;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.2s ease;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        width: fit-content;
+        line-height: 0;
     }
 
 /* / Navigation bar */
@@ -697,12 +762,13 @@ p, li > span, h1, h2, span{
 }
 
 
-/* CONTATC US CONTATC US CONTATC US CONTATC US CONTATC US CONTATC US CONTATC US CONTATC US CONTATC US CONTATC US CONTATC US  */
+/* Contact Us Contact Us Contact Us Contact Us Contact Us Contact Us Contact Us Contact Us Contact Us Contact Us Contact Us  */
 
 #contactForm{
     display: flex;
     flex-direction: column;
     padding: var(--section-padding);
+    padding-top: 0;
 }
 label{
     margin-bottom: 10px;
@@ -715,6 +781,10 @@ input, textarea{
     border: 2px solid var(--blue);
     font-size: 2rem;
     text-align: right;
+}
+input:focus{
+    border: 4px solid var(--blue);
+    outline: none;
 }
 textarea{
     height: 30vh;
@@ -740,18 +810,55 @@ textarea{
     transform: scale(1.05);
 }
 
+.socials{
+    background: var(--light-blue);
+    padding: var(--section-padding);
+
+    display: flex;
+    justify-content: space-around;
+    gap: 5%;
+}
+.social-link{
+    background: white;
+    aspect-ratio: 1/1;
+    flex: 1;
+    max-width: 200px;
+    border-radius: 30px;
+    padding: 2%;
+
+    cursor: pointer;
+    transition: 0.2s all ease;
+}
+.social-link > img{
+    width: 100%;
+    height: 100%;
+}
+.social-link:hover{
+    background: rgba(255, 255, 255, 0.39);
+}
+.social-link:active{
+    transition: 0.1s all ease;
+    scale: 0.9;
+}
+
 
 .hidden{
     display: none;
 }
+.flipped-y{
+    rotate: 180deg;
+}
 
 @media only screen and (max-width: 1478px){
 
-    h2{
+    h2, label, .submit-btn{
         font-size:2rem;
     }
     p, li > span{
         font-size: 1.2rem;
+    }
+    input, textarea{
+        font-size: 1.5rem;
     }
 
 
@@ -767,7 +874,7 @@ textarea{
 }
 @media only screen and (max-width: 1228px){
 
-    h2{
+    h2, label, .submit-btn{
         font-size: 1.6rem;
     }
     p, li > span{
@@ -808,7 +915,7 @@ textarea{
     .gallery > h1, .layout5 > h1, .about-title, .about-title2{
         font-size: 2.6rem;
     }
-    h2{
+    h2, label, .submit-btn{
         font-size: 2rem;
     }
     p, li > span{
@@ -879,6 +986,38 @@ textarea{
             width: 0;
         }
     }
+
+    .pages > li{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .dropdown{
+        position: relative;
+        top: unset;
+        right: unset;
+        flex-direction: row;
+        justify-content: center;
+        width: 90%;
+        border-radius: 10px;
+        background: none;
+    }
+    .dropdown > *{
+        flex: 1;
+        text-align: center;
+    }
+    .dropdown > * > a{
+        font-size: 1.5rem;
+    }
+    @keyframes dropdown {
+        0%{
+            height: 0;
+        }
+        100%{
+            height: 51px;
+        }
+    }
+    
 
     /* Hero */
     .hero{
@@ -1026,7 +1165,7 @@ textarea{
     .gallery > h1, .layout5 > h1, .about-title, .about-title2{
         font-size: 1.8rem;
     }
-    h2{
+    h2, label, .submit-btn{
         font-size: 1.6rem;
     }
     p, li > span{
@@ -1046,6 +1185,7 @@ textarea{
     /* ABOUT PAGE */
     .about-title{
         padding-top: 150px;
+        font-size: 2rem;
     }
     .about-title2{
         padding-top: 10px;
@@ -1060,6 +1200,7 @@ textarea{
         flex-direction: column;
         height: 80vh;
         width: 95vw;
+        padding: 1rem 2rem;
     }
     .event-popup-text > div > *{
         text-align: center;
@@ -1067,6 +1208,13 @@ textarea{
     }
     .close-btn{
         right: 0;
+    }
+
+    /* CONTACT US */
+
+    .social-link{
+        border-radius: 15px;
+        padding: 4%;
     }
 }
 

@@ -17,7 +17,14 @@
             <a href="about.html" class="page-link">حول</a>
             <a href="events.html" class="page-link">الفعاليات والأنشطة</a>
             <a href="#" class="page-link active-page">اتصل بنا</a>
-            <a href="#" class="page-link">البرامج</a>
+            <li>
+                <a class="page-link"><span>▾</span>البرامج</a>
+                <ul class="dropdown hidden">
+                    <li><a href="nursery.html" class="page-link">روضة</a></li>
+                    <li><a href="kg1.html" class="page-link">بستان</a></li>
+                    <li><a href="kg2.html" class="page-link">تمهيدي</a></li>
+                </ul>
+            </li>
         </ul>
         <button class="menu-btn">
           <img src="images//misc/menu.svg" alt="hamburger menu">
@@ -26,15 +33,15 @@
 
     <h1 class="about-title">تواصل معنا</h1>
 
-    <form id="contactForm" action="contact.php" method="post">
-        <label for="fName">الإسم الأول</label>
-        <input type="text" id="fName" name="fName" required>
+    <form id="contactForm" action="https://formsubmit.co/shootmeoutyt@gmail.com" method="POST">
+        <label for="First Name">الإسم الأول</label>
+        <input type="text" id="First Name" name="First Name" required>
 
-        <label for="lName">الإسم الأخير</label>
-        <input type="text" id="lName" name="lName" required>
+        <label for="Last Name">الإسم الأخير</label>
+        <input type="text" id="Last Name" name="Last Name" required>
         
         <label for="phone">رقم الهاتف</label>
-        <input type="number" id="phone" name="phone" required>
+        <input type="tel" id="phone" name="phone" required inputmode="tel" pattern="[0-9]+" maxlength="15">
         
         <label for="email">البريد الإلكتروني</label>
         <input type="email" id="email" name="email" required>
@@ -45,6 +52,12 @@
         <input type="submit" value="ارسل" class="submit-btn">
     </form>
 
+    <section class="socials">
+        <a href="#" target="_blank" class="social-link"><img src="images/misc/Instagram.svg" alt="Instagram"></a>
+        <a href="#" target="_blank" class="social-link"><img src="images/misc/Whatsapp.svg" alt="Whatsapp"></a>
+        <a href="https://www.facebook.com/Rayatalizz" target="_blank" class="social-link"><img src="images/misc/Facebook.svg" alt="Facebook"></a>
+    </section>
     <script src="Js/Menu.js"></script>
+    <script src="Js/DropDown.js"></script>
 </body>
 </html>

@@ -11,18 +11,25 @@
   
 
     <nav>
-        <img src="images/logo.png" alt="logo" class="logo">
+      <img src="images/logo.png" alt="logo" class="logo">
 
-        <ul class="pages">
-            <a href="#" class="page-link active-page">الرئيسية</a>
-            <a href="about.html" class="page-link">حول</a>
-            <a href="events.html" class="page-link">الفعاليات والأنشطة</a>
-            <a href="contact.html" class="page-link">اتصل بنا</a>
-            <a href="#" class="page-link">البرامج</a>
-        </ul>
-        <button class="menu-btn">
-          <img src="images//misc/menu.svg" alt="hamburger menu">
-        </button>
+      <ul class="pages">
+          <a href="#" class="page-link active-page">الرئيسية</a>
+          <a href="about.html" class="page-link">حول</a>
+          <a href="events.html" class="page-link">الفعاليات والأنشطة</a>
+          <a href="contact.html" class="page-link">اتصل بنا</a>
+          <li>
+              <a class="page-link"><span>▾</span>البرامج</a>
+              <ul class="dropdown hidden">
+                  <li><a href="nursery.html" class="page-link">روضة</a></li>
+                  <li><a href="kg1.html" class="page-link">بستان</a></li>
+                  <li><a href="kg2.html" class="page-link">تمهيدي</a></li>
+              </ul>
+          </li>
+      </ul>
+      <button class="menu-btn">
+        <img src="images//misc/menu.svg" alt="hamburger menu">
+      </button>
     </nav>
 
     <header class="hero">
@@ -161,5 +168,6 @@
   <script src="Js/home.js"></script>
   <script src="Js/Menu.js"></script>
   <script src="Js/Carousel.js"></script>
+  <script src="Js/DropDown.js"></script>
 </body>
 </html>

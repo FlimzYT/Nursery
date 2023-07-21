@@ -66,18 +66,32 @@ fetch('../content/eventsContent.json')
 
     events.forEach(event => {
       const eventPopup = event.querySelector(".event-popup");
+
       if (eventPopup) {
+        const childDiv = eventPopup.querySelector("div, div > *")
         const close = eventPopup.querySelector(".close-btn");
     
         close.addEventListener("click", (event) => {
           event.stopPropagation();
           eventPopup.classList.add("hidden");
+        })
+
+        eventPopup.addEventListener("click", (event) => {
+          if(childDiv.contains(event.target)){
+            event.stopPropagation();
+          }
+          else{
+            event.stopPropagation();
+            eventPopup.classList.add("hidden");
+          }
+
         });
       }
     
       event.addEventListener("click", () => {
         if (eventPopup) {
           eventPopup.classList.remove("hidden");
+          console.log('shown')
         }
       });
     });
