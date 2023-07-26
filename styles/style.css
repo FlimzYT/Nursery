@@ -872,6 +872,10 @@ label.en{
 .submit-btn.en{
     align-self: flex-start;
 }
+.hero-title.en{
+    font-size: 7vh;
+}
+
 
 @media only screen and (max-width: 1478px){
 
@@ -1056,6 +1060,9 @@ label.en{
     }
     .banner{
         width: 95vw;
+    }
+    .hero-title.en{
+        font-size: 7vw;
     }
     
     /* GALLERY */

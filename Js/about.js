@@ -94,7 +94,7 @@ let currentLang = 'ar';
 langBtn.addEventListener("click", () => {
 
     if(currentLang === 'ar'){
-        langBtn.innerHTML = 'ar'
+        langBtn.innerHTML = 'ع'
         currentLang = 'en'
 
         document.querySelector('.home-link').innerHTML = "Home"
@@ -164,7 +164,7 @@ function displayData(){
           section.image2
         )
 
-        document.querySelector('.about-title').innerHTML = 'About Rayat Al Izz Nursery';
+        document.querySelector('.about-title').innerHTML = 'About Rayat Al Izz Academy';
         document.querySelector('.about-title2').innerHTML = 'Location';
         document.querySelector('.subtitle').innerHTML = 'Amman, Tabarbour, Umm Heram St.';
 

@@ -94,7 +94,7 @@ let currentLang = 'ar';
 langBtn.addEventListener("click", () => {
 
   if(currentLang === 'ar'){
-      langBtn.innerHTML = 'ar'
+      langBtn.innerHTML = 'ع'
       currentLang = 'en'
 
       document.querySelector('.home-link').innerHTML = "Home"

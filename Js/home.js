@@ -94,7 +94,7 @@ let currentLang = 'ar';
 langBtn.addEventListener("click", () => {
 
     if(currentLang === 'ar'){
-        langBtn.innerHTML = 'ar'
+        langBtn.innerHTML = 'ع'
         currentLang = 'en'
 
         document.querySelector('.home-link').innerHTML = "Home"
@@ -167,7 +167,7 @@ function displayData(){
           section.image2
         )
 
-        document.querySelector('.hero-title').innerHTML = 'Rayat Al Izz Nursery';
+        document.querySelector('.hero-title').innerHTML = 'Rayat Al Izz Academy';
         document.querySelector('.gallery > h1').innerHTML = 'Gallery';
         document.querySelector('.layout5 > h1').innerHTML = 'How old is your child?';
         document.querySelector('.nursery-card > h2').innerHTML = 'Nursery';
