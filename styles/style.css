@@ -319,7 +319,7 @@ p, li > span, h1, h2, span{
     max-width: 33.33%; /* Adjust to control the number of images shown at once */
     padding: 0 15px;
     
-    height: 35vh;
+    aspect-ratio: 16/10;
 }
   
 .slide img {

@@ -125,6 +125,7 @@ langBtn.addEventListener("click", () => {
 
 
 function displayData(){
+  
 fetch('../content/homeContent.json')
 .then(response => response.json())
 .then(data => {

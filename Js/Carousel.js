@@ -74,7 +74,7 @@ nextButton.addEventListener('click', () => {
   stopAutoScroll();
 });
 
-function displayData(){
+function displayImages(){
   fetch('../content/galleryContent.json')
   .then(response => response.json())
   .then(data => {
@@ -93,9 +93,7 @@ function displayData(){
   });
   }
 
-
-
-displayData()
+displayImages()
   
   
 
