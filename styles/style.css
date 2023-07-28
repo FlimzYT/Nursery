@@ -318,7 +318,8 @@ p, li > span, h1, h2, span{
     flex: 0 0 33.33%; /* Adjust to control the number of images shown at once */
     max-width: 33.33%; /* Adjust to control the number of images shown at once */
     padding: 0 15px;
-
+    
+    height: 35vh;
 }
   
 .slide img {
